@@ -1,0 +1,949 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+li {
+  list-style-type: none;
+}
+body {
+  font-family: "Lufga", sans-serif;
+  margin: 1rem 0 auto;
+  width: 100%;
+  /* min-width: 1000px; */
+  display: flex;
+  flex-direction: column;
+}
+.navigation_header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.navigation-header-list {
+  background-color: #171717;
+  border-radius: 999px;
+  display: flex;
+  border: 1px solid transparent;
+  max-width: 1298px;
+  width: 90%;
+  padding: 0 0.5rem;
+}
+.navigation-header-list ul {
+  border-radius: 999px;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.navigation-header-list ul li {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+}
+.navigation-header-list ul li a {
+  padding: 1rem 2rem;
+  border-radius: 999px;
+  color: #fff;
+  text-decoration: none;
+  font-size: clamp(14px, 2vw, 20px);
+}
+.navigation-header-list li a .navigation-header-logo-profil {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+.navigation-header-logo-profil img {
+  max-width: 40px;
+}
+.navigation-header-logo-profil .title {
+  font-weight: 600;
+}
+
+.navigation-header-list ul li a:hover {
+  background-color: #fd853a;
+}
+
+/* Hover Effect */
+
+/* .navigation-header-list ul li:nth-child(4) a{
+  &:hover{
+    background-color: transparent;
+  }
+  .navigation-header-logo-profil::after {
+    content: "JCREA";
+    font-weight: 600;
+    font-size: 20px;
+  }
+} */
+
+.navigation-header-list ul li:nth-child(4) a:not(:focus-within):not(:hover) {
+  .navigation-header-logo-profil::after {
+    content: "JCREA";
+    font-weight: 600;
+    font-size: 20px;
+  }
+}
+
+/* Effect hover di list ke 5 */
+.navigation-header-list ul li:nth-child(4) a:hover {
+  background-color: transparent;
+  width: 174px;
+
+  .navigation-header-logo-profil {
+    position: relative;
+    left: -5%;
+  }
+  .navigation-header-logo-profil::before {
+    content: "Made by";
+    width: 100%;
+    font-size: 14px;
+    font-weight: normal;
+    color: #98a2b3;
+    position: absolute;
+    left: 40%;
+    top: 0;
+  }
+  .navigation-header-logo-profil::after {
+    content: "Dinda S";
+    width: 100%;
+    font-weight: 500;
+    font-size: 20px;
+    position: absolute;
+    left: 40%;
+    top: 33%;
+  }
+}
+/* End effect hover di list ke 5 */
+
+/* End hover Effect */
+
+header .navigation-description {
+  width: 100%;
+  max-width: 1440px;
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.navigation-description .navigation-description-container-one {
+  margin-top: 37px;
+  width: 100%;
+  max-width: 913px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}
+.navigation-description-container-one
+  .navigation-description-container-one-hello {
+  position: relative;
+}
+.navigation-description-container-one-hello h2 {
+  margin: 0;
+  text-align: center;
+  border: 2px solid black;
+  padding: 13px 25px;
+  border-radius: 34px;
+  font-size: 20px;
+}
+.navigation-description-container-one-hello .icons-1 {
+  position: absolute;
+  left: 95%;
+  top: -30%;
+}
+
+.navigation-description-container-one
+  .navigation-description-container-one-introduction {
+  position: relative;
+  font: normal 500 clamp(60px, 5vw, 96px) "Urbanist", sans-serif;
+  line-height: 0.9;
+  text-align: center;
+}
+.navigation-description-container-one
+  .navigation-description-container-one-introduction
+  .icons-2 {
+  position: absolute;
+  left: -9%;
+  bottom: -40%;
+  transform: rotate(20deg);
+
+  /* dibawah  871px hilangin aja*/
+}
+/* Navigation description */
+.navigation-description .navigation-description-container-two {
+  position: relative;
+
+  width: 100%;
+
+  max-width: 952px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  z-index: 9999;
+
+  /* background images */
+
+  background-image: url("./assets/images/setengahlingkaran.png");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: 85%;
+}
+
+.navigation-description-container-two-my-image {
+  width: 100%;
+  object-fit: contain;
+}
+
+/* item kedua */
+.navigation-description-container-two
+  .navigation-description-container-two-porto_or_hire {
+  padding: 2% 2%;
+  font-size: clamp(14px, 2vw, 25.5px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.2);
+
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  bottom: 1%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* transition: all 1s ease-in-out; */
+}
+/* nge hover anakan pertama */
+.navigation-description-container-two-porto_or_hire:not(:hover) {
+  .porto_or_hire:nth-child(1) {
+    background-color: #fd853a;
+    border: 0.3px solid rgba(255, 255, 255, 0.5);
+    border-radius: 60px;
+    transition: all 0.5s ease-in-out;
+  }
+}
+/* merubah warna dari anak-anak navigation-description-container-two-porto_or_hire */
+.navigation-description-container-two-porto_or_hire .porto_or_hire {
+  background-color: transparent;
+  padding: 10px 20px;
+  border-radius: 60px;
+
+  &:focus,
+  &:hover {
+    background-color: #fd853a;
+    border: 0.3px solid rgba(255, 255, 255, 0.5);
+    border-radius: 60px;
+    transition: all 0.5s ease-in-out;
+  }
+}
+
+/* item 3 */
+.navigation-description-container-two-my_description {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+
+  position: absolute;
+  top: 28%;
+  left: -18%;
+}
+
+/* item 4 */
+.navigation-description-container-two-my_experience {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  gap: 10px;
+
+  position: absolute;
+  top: 27%;
+  right: -18%;
+}
+.navigation-description-container-two-my_experience .waktu_experience {
+  font-family: "Urbanist", sans-serif;
+  font-size: clamp(25px, 5vw, 47px);
+  line-height: 0.6;
+}
+.navigation-description-container-two-my_experience .waktu_experience span {
+  font-family: "Lufga", sans-serif;
+  font-size: 20px;
+}
+/* End navigation description */
+
+/* Main */
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+/* Container-Number-One */
+.container-number-one {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("./assets/images/bg_container_my_service.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  width: 100%;
+  gap: 50px;
+}
+
+.my-service-header {
+  margin-top: 30px;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.my-service-header-title {
+  h1 {
+    font-size: clamp(40px, 3vw, 48px);
+  }
+  span {
+    color: #fd853a;
+  }
+}
+.my-service-header-description {
+  width: 50%;
+  font-size: clamp(14px, 2vw, 20px);
+}
+.rectangle-my-service {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.my-service-card {
+  width: 31%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 35px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  margin: 20px 0;
+  transition: all 1s ease-in-out;
+  h2 {
+    margin: 0;
+    font-size: clamp(30px, 2vw, 40px);
+  }
+}
+
+.my-service-card:hover {
+  transform: translateY(-5px);
+  .my-service-card-description {
+    transform: scale(1.01);
+  }
+  background-color: #fd853a;
+}
+
+.my-service-card-title {
+  padding: 7% 5% 6% 8%;
+  padding-left: 30px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+.my-service-card-description {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  margin-top: 15%;
+  line-height: 0;
+}
+
+.number-one {
+  position: relative;
+  z-index: 3;
+}
+.number-one img {
+  width: 100%;
+  border-radius: 35px;
+  object-fit: cover;
+}
+.my-service-card-content {
+  position: absolute;
+  border-radius: 35px;
+}
+.number-two {
+  width: 90%;
+  height: 76.5%;
+  background-color: #9e9d9d;
+  top: -5%;
+  z-index: 2;
+}
+.number-three {
+  width: 79%;
+  height: 76.5%;
+  background-color: #757575;
+  top: -10%;
+  z-index: 1;
+}
+/* End Container-Number-One */
+/* Container-number-two */
+.container-number-two {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  color: #344054;
+  padding-bottom: 5%;
+}
+
+.my-work-experience-title {
+  display: flex;
+  width: 90%;
+  align-items: center;
+  justify-content: center;
+  padding: 10% 0;
+  h1 {
+    color: #344054;
+    font-size: clamp(40px, 5vw, 64px);
+    margin: 0;
+  }
+  span {
+    color: #fd853a;
+  }
+}
+
+.my-work-experience-details {
+  /* bisa dihapus display flexnya ko */
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  position: relative;
+}
+
+.my-work-experience-details-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0 1%;
+  position: relative;
+}
+.item-content-left {
+  width: 38%;
+  .item-content-left-title {
+    margin: 0;
+    font-size: clamp(24px, 2.6vw, 28px);
+  }
+  .item-content-left-date {
+    margin: 1% 0 0 0;
+    font-size: clamp(14px, 1.5vw, 20px);
+    color: #98a2b3;
+  }
+}
+
+.item-content-right {
+  width: 34%;
+  .item-content-right-title {
+    margin: 0;
+    font-size: clamp(24px, 2.6vw, 28px);
+  }
+  .item-content-right-description {
+    margin: 1% 0 0 0;
+    font-size: clamp(14px, 1.5vw, 20px);
+    color: #98a2b3;
+  }
+}
+
+/* membuat lingkaran */
+.my-work-experience-details-row::after {
+  position: absolute;
+  font-family: "Font Awesome 6 Free";
+  content: "\f111";
+  font-size: 40px;
+  font-weight: 800;
+  color: #fd853a;
+
+  /* padding: 4.5px 5px; */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 50px;
+  height: 50px;
+  left: 50%;
+
+  transform: translateX(-50%);
+  /* border: 1px solid black; */
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='100' ry='100' stroke='%231D2939FF' stroke-width='5' stroke-dasharray='50%25%2c 13%25' stroke-dashoffset='73' stroke-linecap='butt'/%3e%3c/svg%3e");
+  border-radius: 100px;
+  z-index: 2;
+  background-color: white;
+}
+/* End membuat lingkaran */
+/* css untuk membuat garis putus-putus */
+.item-content-left::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 90%;
+  right: 50%;
+  top: 12%;
+  transform: translate(-50% -50%);
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='black' stroke-width='6' stroke-dasharray='2%2c 20' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+}
+.item-content-left.item-content-three::after {
+  display: none;
+}
+/* End Container-number-two */
+
+/* Container number three */
+.container-number-three {
+  color: black;
+  width: 100%;
+  background-color: #f2f4f7;
+}
+.container-why_hire_mee {
+  margin: 5% auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+}
+
+.container-why_hire_mee-row {
+  display: flex;
+}
+.content-why_hire_mee-left {
+  width: 46%;
+}
+.why_hire_mee-my_face {
+  width: 100%;
+}
+.content-why_hire_mee-right {
+  width: 54%;
+  flex-direction: column;
+
+  p {
+    font-size: clamp(14px, 1.5vw, 20px);
+    color: #98a2b3;
+  }
+  h2 {
+    margin: 0;
+    font-size: clamp(24px, 2.7vw, 36px);
+    font-weight: 600;
+    color: #1d2939;
+  }
+}
+.why_hire_mee-title {
+  color: #344054;
+  font-size: clamp(40px, 5vw, 64px);
+  margin: 0;
+  span {
+    color: #fd853a;
+  }
+}
+.content-why_hire_mee-right .why_hire_mee-description {
+  width: 64%;
+}
+.why_hire_mee-project {
+  display: flex;
+  gap: 5px;
+  width: 100%;
+}
+.why_hire_mee-project > * {
+  flex-basis: 48%;
+}
+.content-why_hire_mee-right .hire_mee {
+  text-align: center;
+  width: 33%;
+  padding: 5%;
+  font-size: clamp(14px, 2.5vw, 32px);
+  font-weight: 600;
+  color: #000;
+  border: 1px solid black;
+  border-radius: 32px;
+}
+.content-why_hire_mee-right .hire_mee:hover {
+  color: white;
+  background-color: black;
+  transition: all 0.4s ease-in-out;
+}
+/* End Container number three */
+/* Container number four */
+.container-number-four {
+  color: black;
+  h1 {
+    margin: 0 0 20px 0;
+    font-size: clamp(40px, 5vw, 64px);
+    font-weight: 600;
+    color: #1d2939;
+  }
+  h2 {
+    margin: 0;
+    font-size: clamp(24px, 4vw, 48px);
+    color: #344054;
+  }
+  span {
+    color: #fd853a;
+  }
+  p {
+    font-size: clamp(14px, 1.6vw, 24px);
+    color: #344054;
+    text-align: center;
+  }
+
+  ul {
+    padding: 0;
+  }
+}
+.container-my_portofolio {
+  margin: 5% auto;
+  width: 90%;
+}
+.my_portofolio-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.my_portofolio-header-title {
+  width: 50%;
+}
+.my_portofolio-header-button-see_all {
+  width: clamp(110px, 13%, 160px);
+  text-align: center;
+  font-size: clamp(16px, 1.6vw, 24px);
+  border-radius: 60px;
+  background-color: #fd853a;
+  padding: 24px;
+  margin-bottom: 20px;
+}
+
+.my_portofolio-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.my_portofolio-description-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Content image */
+.item-content-images {
+  width: 100%;
+  gap: 20px;
+  justify-content: space-between;
+  border-radius: 20px;
+  position: relative;
+  margin-bottom: 48px;
+}
+.item-position-left,
+.item-position-right {
+  position: relative;
+  width: 49%;
+  height: 300px;
+  overflow: hidden;
+}
+.item-position-left img,
+.item-position-right img {
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: bottom;
+  vertical-align: bottom;
+}
+
+.item-position-left::before,
+.item-position-right::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(0 15%, 0% 100%, 100% 100%);
+  border-radius: 20px;
+  background: linear-gradient(
+    210deg,
+    transparent 60%,
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.7)
+  );
+}
+
+.container-lirante {
+  position: absolute;
+  left: 50%;
+  bottom: -35%;
+  transform: translateX(-50%);
+  width: 95%;
+  transition: 0.4s;
+  padding: 10px 10px;
+  h1 {
+    color: white;
+    font-size: clamp(44px, 4.5vw, 52px);
+  }
+
+  p {
+    margin-top: 20px;
+    font-size: clamp(14px, 1.5vw, 16px);
+    text-align: left;
+    color: white;
+  }
+}
+
+.item-position-left:hover,
+.item-position-right:hover {
+  .container-lirante {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 16px;
+    backdrop-filter: blur(4px);
+    bottom: 5%;
+    padding: 10px 20px;
+  }
+}
+
+/* End content image */
+
+.item-content-list_experience {
+  width: 74%;
+  justify-content: space-around;
+}
+.item-content-about_portfolio {
+  flex-direction: column;
+  width: 65%;
+}
+.item-content-list_experience > li {
+  border-radius: 24px;
+  font-size: clamp(14px, 1.6vw, 24px);
+  color: black;
+  padding: 15px;
+  background-color: #f2f4f7;
+}
+/* End Container number four */
+@media screen and (max-width: 480px) {
+  .navigation-header-list {
+    display: none;
+  }
+
+  .navigation-description-container-two
+    .navigation-description-container-two-porto_or_hire {
+    width: 70%;
+    bottom: -5%;
+  }
+  .navigation-description-container-two-my_experience {
+    display: none;
+  }
+  .navigation-description-container-two-my_description {
+    display: none;
+  }
+
+  .my-service-header {
+    width: 100%;
+    flex-direction: column;
+  }
+  .my-service-header-description {
+    width: 100%;
+    text-align: center;
+    p {
+      margin: 0;
+    }
+  }
+  .rectangle-my-service {
+    width: 100%;
+    justify-content: center;
+  }
+  .my-service-card {
+    width: 90%;
+  }
+  .my-work-experience-details-row {
+    padding-left: 15%;
+  }
+  .my-work-experience-details-row::after {
+    left: 6%;
+    font-size: 25px;
+    width: 35px;
+    height: 35px;
+  }
+  .item-content-left {
+    width: 100%;
+  }
+  .item-content-right {
+    width: 100%;
+  }
+  .item-content-left::after {
+    left: 6%;
+  }
+
+  .container-why_hire_mee-row.content-why_hire_mee-left {
+    display: none;
+  }
+  .container-why_hire_mee-row.content-why_hire_mee-right {
+    width: 100%;
+  }
+  .content-why_hire_mee-right .hire_mee {
+    padding: 4%;
+    width: 35%;
+  }
+
+  /* Container number four */
+  .my_portofolio-header-title {
+    width: 100%;
+  }
+  .my_portofolio-description-content.item-content-list_experience {
+    width: 100%;
+  }
+  .my_portofolio-description-content.item-content-about_portfolio {
+    width: 100%;
+  }
+  .item-content-images {
+    justify-content: flex-start;
+    align-items: start;
+   
+    .item-position-left,
+    .item-position-right {
+      width: 100%;
+    }
+    .container-lirante {
+      bottom: -110px;
+    }
+  }
+  /* End Container number four */
+}
+
+@media screen and (min-width: 481px) and (max-width: 844px) {
+  .my-service-header {
+    width: 97%;
+  }
+
+  .rectangle-my-service {
+    width: 100%;
+    justify-content: center;
+    gap: 3%;
+  }
+  .my-service-card {
+    width: 47%;
+    margin-bottom: 0px;
+  }
+  .my-service-card:nth-child(3) {
+    /* width: 97%; */
+    flex-basis: auto;
+    margin-bottom: 30px;
+  }
+
+  .my-work-experience-details-row {
+    padding-left: 10%;
+  }
+  .my-work-experience-details-row::after {
+    left: 5%;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+  }
+  .item-content-left {
+    width: 100%;
+  }
+  .item-content-right {
+    width: 100%;
+  }
+  .item-content-left::after {
+    left: 5%;
+  }
+  .content-why_hire_mee-right .hire_mee {
+    padding: 5%;
+    width: 40%;
+  }
+  .my_portofolio-description-content.item-content-list_experience {
+    width: 100%;
+  }
+  .my_portofolio-description-content.item-content-about_portfolio {
+    width: 100%;
+  }
+
+  /* Container number four */
+  .item-content-images {
+    justify-content: flex-start;
+    align-items: start;
+    .item-position-left,
+    .item-position-right {
+      width: 80%;
+    }
+    .container-lirante {
+      bottom: -35%;
+    }
+  }
+  /* End container number four */
+}
+
+@media screen and (max-width: 1024px) {
+  .navigation-description-container-two-my_experience {
+    margin-right: 10px;
+    right: 0;
+    left: 0;
+  }
+  .navigation-description-container-two-my_description {
+    margin-left: 10px;
+    right: 0;
+    left: 0;
+  }
+
+  /* container four */
+  .item-content-about_portfolio {
+    width: 80%;
+  }
+  /* End Container number four */
+
+  .item-content-images {
+    justify-content: center;
+  }
+  .item-position-left,
+  .item-position-right {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+  .navigation-description-container-two
+    .navigation-description-container-two-my_description {
+    left: 0;
+    top: 35%;
+  }
+
+  .navigation-description-container-two
+    .navigation-description-container-two-my_experience {
+    right: 0;
+    top: 35%;
+  }
+
+  .item-position-left,
+  .item-position-right {
+    width: 48%;
+  }
+}
+
+@media screen and (min-width: 1281px) and (max-width:1920px) {
+  .container-lirante {
+      bottom: -30%;
+    }
+}

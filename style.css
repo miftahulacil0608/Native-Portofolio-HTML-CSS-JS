@@ -3,6 +3,16 @@
 *::after {
   box-sizing: border-box;
 }
+
+:root {
+  --primary-color: #fd853a;
+  --secondary-color: #344054;
+  --white-color: #ffffff;
+  --black-color: #000000;
+  --font-urbanist: "Urbanist", sans-serif;
+  --font-awesome: "Font Awesome 6 Free", sans-serif;
+}
+
 a {
   text-decoration: none;
   color: white;
@@ -69,7 +79,7 @@ body {
 }
 
 .navigation-header-list ul li a:hover {
-  background-color: #fd853a;
+  background-color: var(--primary-color);
 }
 
 /* Hover Effect */
@@ -167,7 +177,8 @@ header .navigation-description {
 .navigation-description-container-one
   .navigation-description-container-one-introduction {
   position: relative;
-  font: normal 500 clamp(60px, 5vw, 96px) "Urbanist", sans-serif;
+  font: normal 500 clamp(60px, 5vw, 96px) var(--font-urbanist);
+  font-weight: 600;
   line-height: 0.9;
   text-align: center;
 }
@@ -275,7 +286,8 @@ header .navigation-description {
   right: -18%;
 }
 .navigation-description-container-two-my_experience .waktu_experience {
-  font-family: "Urbanist", sans-serif;
+  font-family: var(--font-urbanist);
+  font-weight: 600;
   font-size: clamp(25px, 5vw, 47px);
   line-height: 0.6;
 }
@@ -476,7 +488,7 @@ main {
 /* membuat lingkaran */
 .my-work-experience-details-row::after {
   position: absolute;
-  font-family: "Font Awesome 6 Free";
+  font-family: var(--font-awesome);
   content: "\f111";
   font-size: 40px;
   font-weight: 800;
@@ -730,19 +742,259 @@ main {
 .item-content-list_experience {
   width: 74%;
   justify-content: space-around;
+  gap: 5px;
 }
 .item-content-about_portfolio {
   flex-direction: column;
   width: 65%;
 }
 .item-content-list_experience > li {
+  flex: 1 1 auto;
   border-radius: 24px;
   font-size: clamp(14px, 1.6vw, 24px);
   color: black;
   padding: 15px;
+  text-align: center;
   background-color: #f2f4f7;
 }
 /* End Container number four */
+
+/* Container number five */
+.container-number-five {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.container-number-five .title-header {
+  width: 70%;
+  text-align: center;
+  color: var(--secondary-color);
+  span {
+    color: var(--primary-color);
+  }
+  h1 {
+    font-size: clamp(32px, 5vw, 64px);
+  }
+}
+
+.container-number-five .description {
+  color: var(--black-color);
+  width: 70%;
+  form input,
+  label {
+    font-size: clamp(18px, 2vw, 24px);
+  }
+}
+
+.container-number-five .description .contact-email {
+  background-color: white;
+  border: 1px solid #e4e7ec;
+  border-radius: 50px;
+  padding: 10px 20px;
+}
+.container-number-five .description .contact-email form {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 5px;
+
+  .label-email {
+    flex: 0 1 8%;
+    padding: 10px 13px;
+    border: 1px solid transparent;
+
+    background-color: #ffead5;
+    border-radius: 30px;
+
+    text-align: center;
+
+    i {
+      color: var(--primary-color);
+      line-height: 50%;
+    }
+  }
+  .email {
+    flex: 1 1 70%;
+    min-width: 150px;
+    font-family: var(--font-urbanist);
+    border: 0px solid transparent;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .button-submit {
+    flex: 1 1 10%;
+    padding: 10px 20px;
+    min-width: 80px;
+    font-family: var(--font-urbanist);
+    border: 1px solid transparent;
+    border-radius: 60px;
+    background-color: var(--primary-color);
+    color: white;
+  }
+}
+
+.container-number-five .description .company-feedback-prestation {
+  width: 90%;
+  ul {
+    padding-left: 0;
+    text-align: center;
+  }
+  ul li {
+    display: inline-block;
+    margin-inline: 1%;
+    position: relative;
+  }
+  .achivement::before {
+    font-family: var(--font-awesome);
+    font: var(--fa-font-solid);
+    margin-right: 5px;
+  }
+  .achivement.average-rating::before {
+    content: "\f005";
+  }
+  .achivement.winning-award::before {
+    content: "\f559";
+  }
+  .achivement.certified-product::before {
+    content: "\";
+  }
+}
+
+footer {
+  color: var(--white-color);
+  background-color: var(--black-color);
+border-radius: 24px 24px 0 0;
+}
+footer .container {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  gap: 10px;
+  
+
+}
+
+.container.head-footer {
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  margin-bottom: 3%;
+
+  .title {
+    flex: 1 1 auto;
+    font-size: clamp(32px, 4vw, 48px);
+  }
+  .button-hire {
+    background-color: var(--primary-color);
+    padding: 10px 20px;
+    border-radius: 60px;
+  }
+}
+
+.container.main-footer {
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-block: 4%;
+  border-block: 2px solid #475467;
+
+
+  .main-content {
+    ul {
+      padding-left: 0;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+  }
+
+  .one {
+    flex: 1 1 450px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    p {
+      width: 100%;
+    }
+    ul li {
+      display: inline-block;
+      margin-inline-end: 5px;
+      text-align: center;
+    }
+    .title-content-one{
+      display: flex;
+      gap: 10px;
+      img{
+        width: 47px;
+        height: 47px;
+      }
+      h3{
+        line-height:50%;
+      }
+    }
+
+  }
+  .two {
+    flex: 1 1 auto;
+    .title-content{
+      color: var(--primary-color);
+    }
+  }
+  .three {
+    flex: 1 1 auto;
+    .title-content{
+      color: var(--primary-color);
+    }
+  }
+  .four {
+    flex: 1 1 auto;
+    .title-content{
+      color: var(--primary-color);
+    }
+    .form-email-control {
+
+      ::placeholder {
+        color: var(--black-color);
+        font-weight: 700;
+      }
+      .input-email {
+        padding: 15px;
+        outline: none;
+        border: 0;
+        border-radius: 14px 0 0 14px;
+      }
+      .button-submit {
+        border-radius: 0 14px 14px 0;
+        padding: 15px;
+        outline: none;
+        border: 0;
+
+        background-color: var(--primary-color);
+        color: var(--white-color);
+        .fas.fa-paper-plane{
+          rotate: 60deg;
+        }
+      }
+    }
+  }
+}
+.container.copyright-footer{
+
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+}
+
+
+/* End container number five */
+
 @media screen and (max-width: 480px) {
   .navigation-header-list {
     display: none;
@@ -821,7 +1073,7 @@ main {
   .item-content-images {
     justify-content: flex-start;
     align-items: start;
-   
+
     .item-position-left,
     .item-position-right {
       width: 100%;
@@ -829,6 +1081,14 @@ main {
     .container-lirante {
       bottom: -110px;
     }
+  }
+
+  .container-number-five .title-header {
+    width: 100%;
+  }
+
+  .container-number-five .description {
+    width: 100%;
   }
   /* End Container number four */
 }
@@ -942,8 +1202,8 @@ main {
   }
 }
 
-@media screen and (min-width: 1281px) and (max-width:1920px) {
+@media screen and (min-width: 1281px) and (max-width: 1920px) {
   .container-lirante {
-      bottom: -30%;
-    }
+    bottom: -30%;
+  }
 }

@@ -16,8 +16,8 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@600&display=swap" rel="stylesheet" />
-
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -218,7 +218,8 @@
               <i></i>
               <div class="container-lirante">
                 <h1 class="lirante-label">Lirante</h1>
-                <p class="lirante-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue interdum ligula a dignissim.
+                <p class="lirante-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue
+                  interdum ligula a dignissim.
                   Lorem ipsum dolor sit amet, adipiscing elit. Sed lobortis orci elementum egestas lobortis.</p>
               </div>
 
@@ -227,12 +228,13 @@
               <img src="./assets/images/images_portofolio_full.png" alt="images content">
               <i></i>
 
-            <div class="container-lirante">
-              <h1 class="lirante-label">Lirante</h1>
-              <p class="lirante-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue interdum ligula a
-                dignissim.
-                Lorem ipsum dolor sit amet, adipiscing elit. Sed lobortis orci elementum egestas lobortis.</p>
-            </div>
+              <div class="container-lirante">
+                <h1 class="lirante-label">Lirante</h1>
+                <p class="lirante-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue
+                  interdum ligula a
+                  dignissim.
+                  Lorem ipsum dolor sit amet, adipiscing elit. Sed lobortis orci elementum egestas lobortis.</p>
+              </div>
             </div>
           </div>
           <ul class="my_portofolio-description-content item-content-list_experience">
@@ -256,22 +258,84 @@
         </div>
       </div>
     </div>
-    <div class="container-number-six">
+    <div class="container-number-five">
       <div class="title-header">
-        <h1>HAve an Awsome Project Idea? Let's Discuss</h1>
+        <h1>Have an Awsome Project Idea? <span>Let's Discuss</span></h1>
       </div>
       <div class="description">
         <div class="contact-email">
           <form action="">
-            <input type="email" id="inputemail" name="inputemail" placeholder="Enter Email Address" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$">
-            <input type="submit" value="Send">
+            <label for="inputemail" class="input label-email"><i class="fa-solid fa-envelope"></i></label>
+            <input type="email" class="input email" name="inputemail" placeholder="Enter Email Address"
+              pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$">
+            <input class="input button-submit" type="submit" value="Send">
           </form>
+        </div>
+        <div class="company-feedback-prestation">
+          <ul>
+            <li class="achivement average-rating">4.9/5 Average Ratings</li>
+            <li class="achivement winning-award">25+ Winning Awards</li>
+            <li class="achivement certified-product">Certified Product Designer</li>
+          </ul>
 
         </div>
       </div>
     </div>
     <!-- End My Portofolio -->
   </main>
+  <footer>
+    <div class="container head-footer">
+      <h1 class="title">Lets Connect there</h1>
+      <a class="button-hire" href="#">Hire me</a>
+    </div>
+    <div class="container main-footer">
+      <div class="main-content one">
+        <div class="title-content-one">
+          <img src="./assets/images/icons.png" alt="JC">
+          <h3>JCRE</h3>
+        </div>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue interdum ligula a dignissim. Lorem ipsum
+          dolor sit amet, consectetur adipiscing elit. Sed lobortis orci elementum egestas lobortis.</p>
+        <ul>
+          <li><a href="#" class="fab fa-facebook"></a></li>
+          <li><a href="#" class="fab fa-instagram"></a></li>
+          <li><a href="#" class="fab fa-youtube"></a></li>
+          <li><a href="#" class="fab fa-whatsapp"></a></li>
+          <li><a href="#" class="fab fa-twitter"></a></li>
+        </ul>
+      </div>
+      <div class="main-content two">
+        <h3 class="title-content">Navigation</h3>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Service</a></li>
+          <li><a href="#">Resume</a></li>
+          <li><a href="#">Project</a></li>
+        </ul>
+      </div>
+      <div class="main-content three">
+        <h3 class="title-content">Content</h3>
+        <ul>
+          <li><a href="#">+91 7738443636</a></li>
+          <li><a href="#">Jaycrea36@gmail.com</a></li>
+          <li><a href="#">Portfolio-jcrea.com</a></li>
+        </ul>
+      </div>
+      <div class="main-content four">
+        <h3 class="title-content">Get the latest information</h3>
+        <form class="form-email-control" action="">
+          <input type="email" placeholder="Email Address" class="input-email"><button type="submit"
+            class="button-submit"><i class="fas fa-paper-plane"></i></button>
+        </form>
+      </div>
+    </div>
+    <div class="container copyright-footer">
+      <p>Copyright &copy; 2024 Azisz, All Rights Reserved.</p>
+      <p>User Terms & Conditions | Privacy Policy</p>
+    </div>
+  </footer>
 </body>
 
 </html>

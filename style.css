@@ -35,6 +35,35 @@ body {
   width: 100%;
 }
 
+nav{
+  width: 90%;
+}
+
+nav .topnavigation{
+  display: flex;
+  justify-content: space-between;
+  
+  background-color: #171717;
+  
+}
+
+nav .topnavigation a:not(:focus-within):not(:hover) {
+  .navigation-header-logo-profil::after {
+    content: "JCREA";
+    font-weight: 600;
+    font-size: 20px;
+  }
+}
+.topnavigation a .navigation-header-logo-profil {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+
+
+/* 
 .navigation-header-list {
   background-color: #171717;
   border-radius: 999px;
@@ -64,7 +93,8 @@ body {
   color: #fff;
   text-decoration: none;
   font-size: clamp(14px, 2vw, 20px);
-}
+} */
+/* 
 .navigation-header-list li a .navigation-header-logo-profil {
   display: flex;
   justify-content: flex-start;
@@ -80,7 +110,7 @@ body {
 
 .navigation-header-list ul li a:hover {
   background-color: var(--primary-color);
-}
+} */
 
 /* Hover Effect */
 
@@ -95,6 +125,9 @@ body {
   }
 } */
 
+
+
+
 .navigation-header-list ul li:nth-child(4) a:not(:focus-within):not(:hover) {
   .navigation-header-logo-profil::after {
     content: "JCREA";
@@ -104,7 +137,7 @@ body {
 }
 
 /* Effect hover di list ke 5 */
-.navigation-header-list ul li:nth-child(4) a:hover {
+.topnavigation a:nth-child(4):hover {
   background-color: transparent;
   width: 174px;
 

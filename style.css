@@ -74,9 +74,7 @@ body {
 .navigation-header-logo-profil img {
   max-width: 40px;
 }
-.navigation-header-logo-profil .title {
-  font-weight: 600;
-}
+
 
 .navigation-header-list ul li a:hover {
   background-color: var(--primary-color);

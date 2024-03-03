@@ -942,18 +942,20 @@ footer .container {
     }
   }
   .four {
-    text-align: right;
+    
     flex: 1 1 auto;
     .title-content {
       color: var(--primary-color);
     }
     .form-email-control {
+      
       ::placeholder {
         color: var(--black-color);
         font-weight: 700;
       }
       .input-email {
         padding: 15px;
+        
         outline: none;
         border: 0;
         border-radius: 14px 0 0 14px;

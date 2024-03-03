@@ -36,28 +36,14 @@
         </a>
 
         <a href="#">Resume</a>
-        <a href="#">Prject</a>
+        <a href="#">Project</a>
         <a href="#">Contact</a>
+        <a href="javascript:void(0);" class="icon" onclick="myHumbergurMenuFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
       </div>
     </nav>
-    
-    <!-- <nav class="navigation-header-list">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Service</a></li>
-        <li>
-          <a href="#">
-            <div class="navigation-header-logo-profil">
-              <img src="./assets/images/icons.png" alt="" />
-            </div>
-          </a>
-        </li>
-        <li><a href="#">Resume</a></li>
-        <li><a href="#">Project</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav> -->
+
     <div class="navigation-description">
       <div class="navigation-description-container-one">
         <div class="navigation-description-container-one-hello">
@@ -95,17 +81,17 @@
   </header>
 
   <main>
-    <div class="container-number-one">
+    <article class="container-number-one">
       <div class="my-service-header">
         <div class="my-service-header-title">
           <h1>My <span>Services</span></h1>
         </div>
-        <div class="my-service-header-description">
+        <aside class="my-service-header-description">
           <p>
             Lorem ipsum dolor sit amet, consectetur adipis elit. Duis aute irure
             dolor nunc, posuere et justo vulputate, bibendum sodales.
           </p>
-        </div>
+        </aside>
       </div>
       <div class="rectangle-my-service">
         <div class="my-service-card">
@@ -143,7 +129,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </article>
     <!-- My Work Experience -->
     <div class="container-number-two">
       <div class="my-work-experience-title">
@@ -354,6 +340,21 @@
       <p>User Terms & Conditions | Privacy Policy</p>
     </div>
   </footer>
+
+
+  <script>
+
+    function myHumbergurMenuFunction() {
+
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnavigation") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnavigation";
+      }
+    }
+
+  </script>
 </body>
 
 </html>

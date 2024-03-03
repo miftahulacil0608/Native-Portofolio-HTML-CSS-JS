@@ -35,23 +35,48 @@ body {
   width: 100%;
 }
 
-nav{
+nav {
   width: 90%;
 }
 
-nav .topnavigation{
+nav .topnavigation {
   display: flex;
   justify-content: space-between;
-  
+
   background-color: #171717;
-  
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+
+  border-radius: 50px;
+
+  a:not(:nth-child(4)) {
+    flex: 0 1 136px;
+    padding: 20px 10px;
+    border-radius: 50px;
+    font-size: clamp(14px, 2vw, 18px);
+    &:hover {
+      background-color: var(--primary-color);
+    }
+  }
+}
+
+nav .topnavigation a {
+  text-align: center;
+
+  &:nth-child(4) {
+    flex-grow: 1 0 auto;
+  }
+}
+nav .topnavigation a.icon {
+  display: none;
 }
 
 nav .topnavigation a:not(:focus-within):not(:hover) {
   .navigation-header-logo-profil::after {
     content: "JCREA";
     font-weight: 600;
-    font-size: 20px;
+    font-size: clamp(14px, 2vw, 18px);
   }
 }
 .topnavigation a .navigation-header-logo-profil {
@@ -59,96 +84,24 @@ nav .topnavigation a:not(:focus-within):not(:hover) {
   justify-content: flex-start;
   align-items: center;
   gap: 10px;
-}
 
-
-
-/* 
-.navigation-header-list {
-  background-color: #171717;
-  border-radius: 999px;
-  display: flex;
-  border: 1px solid transparent;
-  max-width: 1298px;
-  width: 90%;
-  padding: 0 0.5rem;
-}
-.navigation-header-list ul {
-  border-radius: 999px;
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-.navigation-header-list ul li {
-  display: flex;
-  align-items: center;
-  list-style-type: none;
-}
-.navigation-header-list ul li a {
-  padding: 1rem 2rem;
-  border-radius: 999px;
-  color: #fff;
-  text-decoration: none;
-  font-size: clamp(14px, 2vw, 20px);
-} */
-/* 
-.navigation-header-list li a .navigation-header-logo-profil {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 10px;
-}
-.navigation-header-logo-profil img {
-  max-width: 40px;
-}
-.navigation-header-logo-profil .title {
-  font-weight: 600;
-}
-
-.navigation-header-list ul li a:hover {
-  background-color: var(--primary-color);
-} */
-
-/* Hover Effect */
-
-/* .navigation-header-list ul li:nth-child(4) a{
-  &:hover{
-    background-color: transparent;
-  }
-  .navigation-header-logo-profil::after {
-    content: "JCREA";
-    font-weight: 600;
-    font-size: 20px;
-  }
-} */
-
-
-
-
-.navigation-header-list ul li:nth-child(4) a:not(:focus-within):not(:hover) {
-  .navigation-header-logo-profil::after {
-    content: "JCREA";
-    font-weight: 600;
-    font-size: 20px;
+  img {
+    max-width: 40px;
   }
 }
 
 /* Effect hover di list ke 5 */
 .topnavigation a:nth-child(4):hover {
-  background-color: transparent;
-  width: 174px;
+  width: 180px;
+  position: relative;
 
   .navigation-header-logo-profil {
     position: relative;
-    left: -5%;
+    left: 0;
   }
   .navigation-header-logo-profil::before {
     content: "Made by";
-    width: 100%;
-    font-size: 14px;
+    font-size: clamp(12px, 1.5vw, 14px);
     font-weight: normal;
     color: #98a2b3;
     position: absolute;
@@ -157,12 +110,12 @@ nav .topnavigation a:not(:focus-within):not(:hover) {
   }
   .navigation-header-logo-profil::after {
     content: "Dinda S";
-    width: 100%;
+
     font-weight: 500;
-    font-size: 20px;
+    font-size: clamp(14px, 2vw, 20px);
     position: absolute;
     left: 40%;
-    top: 33%;
+    bottom: 0;
   }
 }
 /* End effect hover di list ke 5 */
@@ -254,7 +207,7 @@ header .navigation-description {
 /* item kedua */
 .navigation-description-container-two
   .navigation-description-container-two-porto_or_hire {
-  padding: 2% 2%;
+  padding: 10px 10px;
   font-size: clamp(14px, 2vw, 25.5px);
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 50px;
@@ -861,6 +814,7 @@ main {
   }
 
   .button-submit {
+    cursor: pointer;
     flex: 1 1 10%;
     padding: 10px 20px;
     min-width: 80px;
@@ -902,15 +856,13 @@ main {
 footer {
   color: var(--white-color);
   background-color: var(--black-color);
-border-radius: 24px 24px 0 0;
+  border-radius: 24px 24px 0 0;
 }
 footer .container {
   display: flex;
   width: 90%;
   margin: auto;
   gap: 10px;
-  
-
 }
 
 .container.head-footer {
@@ -937,7 +889,6 @@ footer .container {
   padding-block: 4%;
   border-block: 2px solid #475467;
 
-
   .main-content {
     ul {
       padding-left: 0;
@@ -961,38 +912,37 @@ footer .container {
       margin-inline-end: 5px;
       text-align: center;
     }
-    .title-content-one{
+    .title-content-one {
       display: flex;
       gap: 10px;
-      img{
+      img {
         width: 47px;
         height: 47px;
       }
-      h3{
-        line-height:50%;
+      h3 {
+        line-height: 50%;
       }
     }
-
   }
   .two {
     flex: 1 1 auto;
-    .title-content{
+    .title-content {
       color: var(--primary-color);
     }
   }
   .three {
     flex: 1 1 auto;
-    .title-content{
+    .title-content {
       color: var(--primary-color);
     }
   }
   .four {
+    text-align: right;
     flex: 1 1 auto;
-    .title-content{
+    .title-content {
       color: var(--primary-color);
     }
     .form-email-control {
-
       ::placeholder {
         color: var(--black-color);
         font-weight: 700;
@@ -1011,28 +961,22 @@ footer .container {
 
         background-color: var(--primary-color);
         color: var(--white-color);
-        .fas.fa-paper-plane{
+        .fas.fa-paper-plane {
           rotate: 60deg;
         }
       }
     }
   }
 }
-.container.copyright-footer{
-
-display: flex;
-justify-content: space-between;
-flex-wrap: wrap;
+.container.copyright-footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
-
 
 /* End container number five */
 
 @media screen and (max-width: 480px) {
-  .navigation-header-list {
-    display: none;
-  }
-
   .navigation-description-container-two
     .navigation-description-container-two-porto_or_hire {
     width: 70%;
@@ -1124,6 +1068,52 @@ flex-wrap: wrap;
     width: 100%;
   }
   /* End Container number four */
+}
+
+@media screen and (max-width: 780px) {
+  nav .topnavigation {
+    a:not(:nth-child(4)) {
+      display: none;
+      order: 4;
+    }
+    a:nth-child(4) {
+      flex: 1 1 auto;
+
+      &:hover {
+        .navigation-header-logo-profil::before,
+        .navigation-header-logo-profil::after {
+          left: 50px;
+        }
+      }
+    }
+
+    a.icon {
+      display: block;
+      flex: 0 1 120px;
+      padding: 0;
+
+      &:hover {
+        background-color: transparent;
+      }
+    }
+  }
+
+ 
+  .topnavigation.responsive .icon {
+    position: absolute;
+    width: 120px;
+    padding: 0;
+    top: 30px;
+    right: 0;
+  }
+  .topnavigation.responsive {
+    position: relative;
+    display: block;
+    a:not(:last-child) {
+      display: block;
+      text-align: left;
+    }
+      }
 }
 
 @media screen and (min-width: 481px) and (max-width: 844px) {
